@@ -10,9 +10,9 @@ object Course02 {
 
     def main(args: Array[String]): Unit = {
         var x=if("hello" == "hell") 1 else 0
-        System.out.println(x)
-        System.out.println(gcdLoop(2, 11))
-        System.out.println(gcd(2, 11))
+        println(x)
+        println(gcdLoop(2, 11))
+        println(gcd(2, 11))
         dirFiles()
     }
 
