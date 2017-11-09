@@ -1,5 +1,7 @@
 package main.scala.course02
 
+import java.io.File
+
 /**
   * Scala基本类型及操作、程序控制结构
   * http://blog.csdn.net/lovehuangjiaju/article/details/46953423
@@ -11,6 +13,7 @@ object Course02 {
         System.out.println(x)
         System.out.println(gcdLoop(2, 11))
         System.out.println(gcd(2, 11))
+        dirFiles()
     }
 
     /**
@@ -35,6 +38,12 @@ object Course02 {
     def gcd(x:Long,y:Long):Long =
     if(y == 0) x else gcd(y,y%x)
 
-
+    def dirFiles()={
+        val filesHere=(new File(".")).listFiles()
+        for(file <- filesHere if file.getName.endsWith(".scala"))
+            println(file)
+        for(file <- filesHere if file.isFile;if file.getName.endsWith(".scala"))
+            println(file)
+    }
 
 }
