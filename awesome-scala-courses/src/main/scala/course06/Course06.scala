@@ -120,6 +120,30 @@ public class course06.Person {
 /*在java语言当中，在定义JavaBean的时候生成的都是setXxx()、getXxx()方法，
 但scala语言生成的getter方法和setter方法并不是这样的，如果也需要程序自动会生成getter方法和setter方法，
 则需要引入 scala.reflect.BeanProperty 然后采用注解的方式修饰变量*/
+//定义了主构造器，主构造器的参数为String、Int类型
+//当在创建对象时，需要进行相关初始化操作时，可以将初始化语句放在类体中，
+//同样也可以在类中添加或重写相关方法
+//主构建器还可以使用默认参数
+//默认参数的主构建器，参数带访问控制符号
+//age变成私有成员，其getter方法是私有的，外部不能访问
+//当主构造器的参数不用var或val修饰的时候，参数会生成类的私有val成员，
+//并且不会产生getter和setter方法
+//toString()方法去掉，则类中无任何地方使用了主构造器的参数，此时主构造器参数不会生成类成员
+class Office(val workContext:String="",private val workTimes:Int=18){
+
+    //println将作为主构建器中的一部分，在创建对象时被执行
+    println("constructing Office ......")
+    //重写toString()方法
+    override def toString()=workContext+":"+workTimes
+
+}
+辅助构造函数
+
+//前面讲了，如果禁用掉了主构建器，则必须使用辅助构造函数来创建对象。
+// 辅助构造函数具有两个特点：（1）辅助构建器的名称为this，
+// java中的辅助构造函数与类名相同，这常常会导致修改类名时出现不少问题，
+// scala语言避免了这样的问题；（2）调用辅助构造函数时，
+// 必须先调用主构造函数或其它已经定义好的构造函数。
 
 
 
