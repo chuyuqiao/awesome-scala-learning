@@ -1,4 +1,4 @@
-# awesome-scala-learning
+# awesome-scala-learning master
 
 [![Build Status](https://api.travis-ci.org/chuyuqiao/awesome-scala-learning.svg?branch=master)](https://travis-ci.org/chuyuqiao/awesome-scala-learning/branches)
 [![Coverage Status](https://coveralls.io/repos/github/chuyuqiao/awesome-scala-learning/badge.svg?branch=master&service=github)](https://coveralls.io/github/chuyuqiao/awesome-scala-learning?branch=master)
